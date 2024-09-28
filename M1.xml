@@ -1,0 +1,114 @@
+<!--
+theme name:     45s RG40XXH
+creator:		Dwayne Hurst
+version         1
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<theme>
+   <formatVersion>7</formatVersion> 
+   
+<feature supported="carousel">
+   <view name="system">
+
+      <carousel name="systemcarousel">
+        <type>vertical</type>
+        <pos>-0.03 0</pos>
+        <logoAlignment>left</logoAlignment>         
+        <size>1 1</size>
+        <logoSize>0.3 0.3</logoSize>        
+        <logoScale>1.02</logoScale>
+        <zIndex>4</zIndex>          
+        <color>00000000</color>
+        <maxLogoCount>9</maxLogoCount>       
+      </carousel>              
+         		
+       <image name="logo">
+	     <path>./_inc/wheels1/${system.theme}.png</path>
+       </image>    
+   
+       <image name="background667" extra="true">
+         <path>./_inc/images/background.png</path>
+		 <origin>0 0</origin>     
+         <pos>0 0</pos>
+         <size>1 1</size>
+         <zIndex>1</zIndex>		 
+      </image> 
+ 
+       <image name="LP" extra="true">
+         <path>./_inc/45s/${system.theme}.png</path>
+		 <origin>0 0</origin>     
+         <pos>0.325 0.0625</pos>
+         <size>0.65625 0.875</size>
+         <zIndex>3</zIndex>
+         <storyboard>
+            <animation property="rotation" from ="1" to="360" duration="4500" repeat="forever"/>
+			<animation property="opacity" from="0" to="1" duration="100" mode="Linear"/>
+			<animation property="opacity" from="1" to="0" begin="6500" duration="500" mode="Linear"/>			
+		 </storyboard>			 
+      </image> 
+ 
+       <image name="arm" extra="true">
+         <origin>0 0</origin>
+	     <path>./_inc/images/arm.png</path>       
+         <pos>0 0.3</pos>
+         <size>1 1</size>
+         <zIndex>10</zIndex>
+         <storyboard>
+			<animation property="y" to="0" begin="500" duration="500" mode="EaseIn"/>
+			<animation property="y" to="0.3" begin="6000" duration="500" mode="EaseIn"/>			
+		 </storyboard>		 
+      </image>                        
+                            
+      <text name="systemInfo">     
+         <pos>0.165 0.74</pos>
+         <backgroundColor>00000000</backgroundColor>
+         <color>ffffff</color>
+         <glowColor>000000</glowColor>      
+         <fontPath>./_inc/fonts/Cabin-Bold.ttf</fontPath>
+	     <fontSize>0.045</fontSize>
+         <zIndex>120</zIndex>
+			<storyboard>
+				<animation property="opacity" from="0" to="0" duration="100" mode="Linear"/>
+				<animation property="opacity" from="0" to="1" begin="6500" duration="500" mode="Linear"/>
+			</storyboard>                      	     
+      </text>             		
+
+     <video name="backgroundvideo" extra="true">       
+        <visible>true</visible>	 	 
+        <rotation>0</rotation>  
+        <roundCorners>0.00</roundCorners>             
+        <color>FFFFFF</color> 
+         <origin>0 0</origin>
+         <pos>0.379625 0.175</pos>
+         <size>0.55 0.55</size>          
+         <zIndex>20</zIndex> 
+			<storyboard>
+				<animation property="opacity" from="1" to="0" begin="50" duration="50" mode="Linear"/>			
+				<animation property="opacity" from="0" to="1" begin="6500" duration="500" mode="Linear"/>
+			</storyboard>                            
+     </video>
+
+       <image name="videoshade" extra="true">
+         <origin>0 0</origin>
+	     <path>./_inc/images/videoshade.png</path>       
+         <pos>0.153 0</pos>
+         <size>1 1</size>
+         <zIndex>4</zIndex>
+         <storyboard>
+            <animation property="opacity" to="0" begin="50" duration="50" mode="EaseIn"/>
+			<animation property="opacity" to="1" begin="6500" duration="500" mode="EaseIn"/>
+		 </storyboard>		 
+      </image>
+
+       <image name="logovideooff" extra="true">
+         <storyboard>
+            <animation property="opacity" to="0" begin="1" duration="1" mode="EaseIn"/>
+		 </storyboard>	        	     
+       </image> 
+            
+   </view>
+</feature>
+
+</theme>
